@@ -22,6 +22,13 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             Console.WriteLine(prenom);
             prenom = "Etienne";
             Console.WriteLine(prenom);
+
+            string p = "Jim";
+            int a = 28;
+            string presentation = "Il s'appelle " + p + " et il a " + a + " ans.";
+            Console.WriteLine(presentation);
+            Console.WriteLine("Il s'appelle {0} et il a {1} ans.", p, a);
+            Console.WriteLine($"Il s'appelle {p} et il a {a} ans.");
             Console.ReadKey();
         }
     }

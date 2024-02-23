@@ -89,8 +89,8 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
                 Console.WriteLine("Vous n'avez pas de chat");
             }
 
-            bool chien = false;
-           if (!chien)
+            bool chien = true;
+            if (!chien)
             {
                 Console.WriteLine("Vous n'avez pas de chien");
             }

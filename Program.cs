@@ -54,7 +54,50 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             nombre4 = nombre4 % 4;
             Console.WriteLine(nombre4);
 
-            
+            // conditionnel if
+            int vitesse = 90;
+            if (vitesse > 90)
+            {
+                Console.WriteLine("Vous avez une amende");
+            }
+            else if (vitesse == 90)
+            {
+                Console.WriteLine("Vous êtes à la limite");
+            }
+            else
+            {
+                Console.WriteLine("Vous êtes dans les normes");
+            }
+
+            string username = "admin";
+            string password = "123456";
+            if (username == "admin" && password == "123456")
+            {
+                Console.WriteLine("Vous êtes connecté");
+            }
+            else
+            {
+                Console.WriteLine("Erreur de connexion");
+            }
+            bool chat = true;
+            if (chat)
+            {
+                Console.WriteLine("Vous avez un chat");
+            }
+            else
+            {
+                Console.WriteLine("Vous n'avez pas de chat");
+            }
+
+            bool chien = false;
+           if (!chien)
+            {
+                Console.WriteLine("Vous n'avez pas de chien");
+            }
+            else
+            {
+                Console.WriteLine("Vous avez un chien");
+            }
             Console.ReadKey();
         }
     }

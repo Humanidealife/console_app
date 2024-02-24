@@ -144,6 +144,7 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
                 break;
             }
 
+            // ReadLine
             Console.WriteLine("Entrez votre prénom ?");
             string prenom2;
             prenom2 = Console.ReadLine();
@@ -153,6 +154,36 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             Console.WriteLine("Entrez votre prénom ?");
             string prenom3 = Console.ReadLine();
             Console.WriteLine("Bonjour, " + prenom3);
+
+            // tableau
+            string[] tabMois =
+            {
+              "Janvier",
+              "Février",
+              "Mars",
+              "Avril",
+              "Mai",
+              "Juin",
+              "Juillet",
+              "Août",
+              "Septembre",
+              "Octobre",
+              "Novembre",
+              "Décembre"
+            };
+            Console.WriteLine(tabMois[10]);
+            Console.WriteLine("Longueur du tableau " + tabMois.Length);
+            Console.WriteLine(tabMois[3]);
+            tabMois[3] = "Nouveau mois";
+            Console.WriteLine(tabMois[3]);
+
+            string[] tabMois2 = new string[2];
+            tabMois2[0] = "Janvier";
+            Console.WriteLine("Tu dois entrer qelque chose ici");
+            string str = Console.ReadLine();
+            tabMois2[1] = str;
+            Console.WriteLine("Voici ce que tu as écrit : ");
+            Console.WriteLine(tabMois2[1]);
 
             Console.ReadKey();
         }

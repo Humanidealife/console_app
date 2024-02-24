@@ -223,6 +223,31 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               i3 += 10;
             } while (i3 <1);
 
+            // Conversion de types
+            int nb = 14;
+            float nb1 = nb;
+
+            float nb2 = 16.78f;
+            int nb3 = (int)nb2;
+            Console.WriteLine(nb3);
+
+            string nb4 = Console.ReadLine();
+            int resultat;
+
+            if (Int32.TryParse(nb4, out resultat))
+            {
+              resultat = Int32.Parse(nb4) * 2;
+              Console.WriteLine(nb4 + " multiplié par 2 est égal à " + resultat);
+            }
+            else
+            {
+              Console.WriteLine("Erreur de conversion");
+            }
+
+            int nb5 = 10;
+            string str1 = nb5.ToString();
+            Console.WriteLine(str1);
+
             Console.ReadKey();
         }
     }

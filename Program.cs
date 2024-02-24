@@ -98,6 +98,52 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             {
                 Console.WriteLine("Vous avez un chien");
             }
+
+            // Switch
+            string couleur = "violet";
+            switch (couleur)
+            {
+              case "rouge":
+                Console.WriteLine("La couleur " + couleur + " est ma préférée");
+                break;
+              case "bleu":
+                Console.WriteLine("La couleur " + couleur + " est une super couleur");
+                break;
+
+                default:
+                Console.WriteLine("Je ne connais pas cette couleur");
+                break;
+            }
+
+            int note = 13;
+            switch (note)
+            {
+              case 20:
+              case 19:
+              case 18:
+                Console.WriteLine("Excellent");
+                break;
+              case 17:
+              case 16:
+                Console.WriteLine("Très bien");
+                break;
+              case 15:
+              case 14:
+                Console.WriteLine("Bien");
+                break;
+              case 13:
+              case 12:
+                Console.WriteLine("Assez bien");
+                break;
+              case 11:
+              case 10:
+                Console.WriteLine("Passable");
+                break;
+              default:
+                Console.WriteLine("Insuffisant");
+                break;
+            }
+
             Console.ReadKey();
         }
     }

@@ -179,11 +179,49 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
 
             string[] tabMois2 = new string[2];
             tabMois2[0] = "Janvier";
-            Console.WriteLine("Tu dois entrer qelque chose ici");
+            Console.WriteLine("Tu dois entrer quelque chose ici");
             string str = Console.ReadLine();
             tabMois2[1] = str;
             Console.WriteLine("Voici ce que tu as écrit : ");
             Console.WriteLine(tabMois2[1]);
+
+            // Structure conditionnelle
+            for (int i =0; i<=10; i++)
+            {
+              Console.WriteLine("Valeur de i : " + i);
+            }
+
+            int compteur;
+            for(compteur=0; compteur<=10; compteur+=3)
+            {
+              Console.WriteLine("Valeur de compteur : " + compteur);
+            }
+
+            string[] tPrenoms = {"Luc", "Marc", "Jean-Jacques", "Pierre", "Pablo"};
+            for( int i =0; i <tPrenoms.Length; i++)
+            {
+              Console.WriteLine("Index : " + i + " Valeur : " + tPrenoms[i]);
+            }
+
+            string[] tVilles ={"Paris", "Rennes", "Le Mans", "Coppenhague", "Londres"};
+            foreach (string ville in tVilles)
+            {
+              Console.WriteLine(ville);
+            }
+
+            int i2 = 10;
+            while (i2<100)
+            {
+              Console.WriteLine("valeur de i2 : " + i2);
+              i2 += 10;
+            }
+
+            int i3 =10;
+            do
+            {
+              Console.WriteLine("Valuer de i3 :" + i3);
+              i3 += 10;
+            } while (i3 <1);
 
             Console.ReadKey();
         }

@@ -144,6 +144,16 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
                 break;
             }
 
+            Console.WriteLine("Entrez votre prénom ?");
+            string prenom2;
+            prenom2 = Console.ReadLine();
+            Console.WriteLine("Bonjour, " + prenom2);
+            Console.WriteLine(prenom2.GetType());
+            // ou
+            Console.WriteLine("Entrez votre prénom ?");
+            string prenom3 = Console.ReadLine();
+            Console.WriteLine("Bonjour, " + prenom3);
+
             Console.ReadKey();
         }
     }

@@ -282,6 +282,54 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               Console.WriteLine(prenom5);
             }
 
+            // Les dictionnaires
+            Dictionary<string, string> dicoExt = new Dictionary<string, string>();
+            dicoExt.Add("bmp", "paint.exe");
+            dicoExt.Add("txt", "notepad.exe");
+            dicoExt.Add("docx", "winword.exe");
+            dicoExt.Add("xlsx", "excel.exe");
+
+            dicoExt.Remove("txt");
+            // if (dicoExt.ContainsKey("docx"))
+            // {
+            //   Console.WriteLine(dicoExt["xlsx"]);
+            // }
+            // else
+            // {
+            //   Console.WriteLine("La clé n'existe pas");
+            // }
+
+
+            // string resultat2;
+            // if (dicoExt.TryGetValue("bmp", out resultat2))
+            // {
+            //   Console.WriteLine(dicoExt["bmp"]);
+            // }
+            // else
+            // {
+            //   Console.WriteLine("La clé n'exste pas");
+            // }
+
+
+            foreach (KeyValuePair<string, string> kvp in dicoExt)
+            {
+              Console.WriteLine("Clé : " +kvp.Key + " Valeur : " + kvp.Value);
+              Console.WriteLine(kvp);
+            }
+
+            Console.WriteLine(dicoExt["bmp"]);
+
+
+            Console.WriteLine(dicoExt.Count);
+
+            Dictionary<string, string> dicoExt2 = new Dictionary<string, string>
+            {
+              {"jpg", "paint.exe"},
+              {"png", "paint.exe"},
+              {"gif", "photo.exe"}
+            };
+
+
             Console.ReadKey();
         }
     }

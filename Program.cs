@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Collections.Generic;
 using System.IO.Compression;
 
 namespace console_app // Remplacez MonNamespace par le nom de votre namespace
@@ -231,6 +232,7 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             int nb3 = (int)nb2;
             Console.WriteLine(nb3);
 
+            Console.WriteLine("Entrez un nombre");
             string nb4 = Console.ReadLine();
             int resultat;
 
@@ -247,6 +249,38 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             int nb5 = 10;
             string str1 = nb5.ToString();
             Console.WriteLine(str1);
+
+            // Les listes
+            List<string> listPrenoms = new List<string>();
+            listPrenoms.Add("Jean-Marc");
+            listPrenoms.Add("Jean-Luc");
+            listPrenoms.Add("Pierre");
+            listPrenoms.Add("Paul");
+
+            // listPrenoms.Remove("Pierre");
+            // listPrenoms.RemoveAt(0);
+            listPrenoms.RemoveRange(0,3);
+            listPrenoms.Clear();
+            foreach (string prenom4 in listPrenoms)
+            {
+              Console.WriteLine(prenom4);
+            }
+            // listPrenoms[0] = "Jean-Michel";
+
+            // Console.WriteLine(listPrenoms[0]);
+
+            Console.WriteLine(listPrenoms.Count);
+
+            List<string> listPrenoms2 = new List<string>
+            {
+              "Zoe",
+              "Lucie",
+              "Marie"
+            };
+            foreach (string prenom5 in listPrenoms2)
+            {
+              Console.WriteLine(prenom5);
+            }
 
             Console.ReadKey();
         }

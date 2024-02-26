@@ -351,6 +351,23 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             Console.WriteLine((int)mois.Février);
             Console.WriteLine(m);
 
+            // gestion des exceptions
+            Console.WriteLine("Entrez un nombre :");
+
+            try
+            {
+              int nba = int.Parse(Console.ReadLine());
+              Console.WriteLine($"1024/{nba}={1024/nba}");
+            }
+            catch (Exception ex)
+            {
+              Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+              Console.WriteLine("Fin du programme.");
+            }
+
             Console.ReadKey();
         }
     }

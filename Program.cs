@@ -398,10 +398,18 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             // personnaliser la console
 
 
-            Console.CursorSize = 200;
+            // Console.CursorSize = 200;
             Console.CursorVisible = true;
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.ForegroundColor = ConsoleColor.DarkRed;
+
+            //random
+            Random rand = new Random();
+            for (int i=0; i<1; i++)
+            {
+              int nb6 = rand.Next(101);
+              Console.WriteLine(nb6);
+            }
 
 
             Console.ReadKey();

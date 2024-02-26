@@ -7,6 +7,21 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
 {
     class Program
     {
+      enum mois
+      {
+        Janvier = 1,
+        Février = 2,
+        Mars = 3,
+        Avril = 4,
+        Mai = 5,
+        Juin = 6,
+        Juillet = 7,
+        Août = 8,
+        Septembre = 9,
+        Octobre = 10,
+        Novembre = 11,
+        Décembre = 12
+      }
         static void Main(string[] args)
         {
             Console.WriteLine("Voici, mon prmier programme en C#");
@@ -329,6 +344,12 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               {"gif", "photo.exe"}
             };
 
+            // Constantes et énumérations
+            const float pi = 3.14f;
+
+            mois m = mois.Octobre;
+            Console.WriteLine((int)mois.Février);
+            Console.WriteLine(m);
 
             Console.ReadKey();
         }

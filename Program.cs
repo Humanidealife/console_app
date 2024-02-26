@@ -24,6 +24,13 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
       }
         static void Main(string[] args)
         {
+            Console.Title = "Ma console en C#";
+            Console.BackgroundColor = ConsoleColor.DarkCyan;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WindowWidth = 100;
+            Console.WindowHeight = 30 ;
+
+
             Console.WriteLine("Voici, mon prmier programme en C#");
             // Boolean
             bool homme = true;
@@ -387,6 +394,15 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
 
             int moyenneAge = 20;
             string messageAge = moyenneAge >18 ? "Majeur" : "Mineur";
+
+            // personnaliser la console
+
+
+            Console.CursorSize = 200;
+            Console.CursorVisible = true;
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+
 
             Console.ReadKey();
         }

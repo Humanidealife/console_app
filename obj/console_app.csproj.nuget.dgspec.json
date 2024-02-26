@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/qmcptj/code/Humanidealife/console_app/console_app.csproj": {}
+    "/home/qmcptj/code/Humanidealife/cours_c/console_app.csproj": {}
   },
   "projects": {
-    "/home/qmcptj/code/Humanidealife/console_app/console_app.csproj": {
+    "/home/qmcptj/code/Humanidealife/cours_c/console_app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/qmcptj/code/Humanidealife/console_app/console_app.csproj",
+        "projectUniqueName": "/home/qmcptj/code/Humanidealife/cours_c/console_app.csproj",
         "projectName": "console_app",
-        "projectPath": "/home/qmcptj/code/Humanidealife/console_app/console_app.csproj",
+        "projectPath": "/home/qmcptj/code/Humanidealife/cours_c/console_app.csproj",
         "packagesPath": "/home/qmcptj/.nuget/packages/",
-        "outputPath": "/home/qmcptj/code/Humanidealife/console_app/obj/",
+        "outputPath": "/home/qmcptj/code/Humanidealife/cours_c/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/qmcptj/.nuget/NuGet/NuGet.Config"

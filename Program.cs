@@ -368,6 +368,26 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               Console.WriteLine("Fin du programme.");
             }
 
+            // Opéraeur ternaire
+
+            bool humain = true;
+            // string message;
+            // if (humain)
+            // {
+            //   message = "Bonjour humain";
+            // }
+            // else
+            // {
+            //   message = "Bonjour mais qui es-tu ?";
+            // }
+
+            // Console.WriteLine(message);
+
+            string message = humain ? "Bonjour humain" : "Bonjour mais qui es-tu ?";
+
+            int moyenneAge = 20;
+            string messageAge = moyenneAge >18 ? "Majeur" : "Mineur";
+
             Console.ReadKey();
         }
     }

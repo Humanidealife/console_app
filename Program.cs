@@ -25,10 +25,10 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
         static void Main(string[] args)
         {
             Console.Title = "Ma console en C#";
-            Console.BackgroundColor = ConsoleColor.DarkCyan;
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WindowWidth = 100;
-            Console.WindowHeight = 30 ;
+            // Console.BackgroundColor = ConsoleColor.DarkCyan;
+            // Console.ForegroundColor = ConsoleColor.Yellow;
+            // Console.WindowWidth = 100;
+            // Console.WindowHeight = 30 ;
 
 
             Console.WriteLine("Voici, mon prmier programme en C#");
@@ -399,9 +399,9 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
 
 
             // Console.CursorSize = 200;
-            Console.CursorVisible = true;
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.ForegroundColor = ConsoleColor.DarkRed;
+            // Console.CursorVisible = true;
+            // Console.BackgroundColor = ConsoleColor.Blue;
+            // Console.ForegroundColor = ConsoleColor.DarkRed;
 
             //random
             Random rand = new Random();
@@ -412,6 +412,50 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             }
 
 
+            // Méthodes ou fonctions
+            AffichageErrreur();
+
+            void AffichageErrreur()
+            {
+              Console.ForegroundColor = ConsoleColor.Red;
+              Console.WriteLine("********************");
+              Console.ForegroundColor = ConsoleColor.Green;
+              Console.WriteLine("Erreur de saisie");
+              Console.ForegroundColor = ConsoleColor.Red;
+              Console.WriteLine("********************");
+              Console.ForegroundColor = ConsoleColor.White;
+            }
+
+            void Table2()
+            {
+              for (int i=0; i<10; i++)
+              Console.WriteLine($"{i}*2={i*2}");
+            }
+
+            Table2();
+
+            void ditBonjour(string prenomA="Paul", int nbFois=1)
+            {
+              for (int i=1; i<=nbFois; i++)
+              {
+                Console.WriteLine("Bonjour "+ prenomA);
+              }
+
+            }
+
+            ditBonjour(prenomA: "Etienne", nbFois: 3);
+
+            void Table(int x)
+            {
+              for (int i=0; i<=10; i++)
+              {
+                Console.WriteLine($"{i}*{x} = {i*x}");
+              }
+            }
+
+            Table(5);
+            Console.WriteLine("");
+            Table(9);
             Console.ReadKey();
         }
     }

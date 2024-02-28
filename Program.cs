@@ -510,6 +510,10 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               Console.WriteLine();
             }
 
+            // Type var implicite
+
+            var i = 22;
+            Console.WriteLine(i.GetType());
             Console.ReadKey();
         }
         static void Somme1(int nbD, int nbE)

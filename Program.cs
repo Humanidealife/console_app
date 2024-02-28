@@ -493,6 +493,23 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             // surcharge de méthode
             Somme1(6, 8, 9);
 
+            // Méthode générique
+
+            int nbF = 5;
+            string str2 = "Azerty";
+            bool condition = true;
+
+            Affiche(str2, "aaa");
+            Affiche(nbF, "bbb");
+            Affiche(condition, "ccc");
+
+            void Affiche<T>(T element, string str)
+            {
+              Console.WriteLine($"Valeur:{element} {str}");
+              Console.WriteLine($"Type:{element.GetType()}");
+              Console.WriteLine();
+            }
+
             Console.ReadKey();
         }
         static void Somme1(int nbD, int nbE)
@@ -504,5 +521,7 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
         {
           Console.WriteLine(nbD + nbE + nbF);
         }
+
+
     }
 }

@@ -482,6 +482,14 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             }
 
             Console.WriteLine(pgq10(13));
+
+            // méthode Main
+
+            foreach(string a in args)
+            {
+              Console.WriteLine(a);
+            }
+
             Console.ReadKey();
         }
     }

@@ -489,7 +489,7 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             {
               Console.WriteLine(a);
             }
-
+            
             Console.ReadKey();
         }
     }

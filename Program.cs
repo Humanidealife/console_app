@@ -485,12 +485,24 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
 
             // méthode Main
 
-            foreach(string a in args)
-            {
-              Console.WriteLine(a);
-            }
-            
+            // foreach(string a in args)
+            // {
+            //   Console.WriteLine(a);
+            // }
+
+            // surcharge de méthode
+            Somme1(6, 8, 9);
+
             Console.ReadKey();
+        }
+        static void Somme1(int nbD, int nbE)
+        {
+          Console.WriteLine(nbD + nbE);
+        }
+
+        static void Somme1(int nbD, int nbE, int nbF)
+        {
+          Console.WriteLine(nbD + nbE + nbF);
         }
     }
 }

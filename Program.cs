@@ -456,6 +456,32 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             Table(5);
             Console.WriteLine("");
             Table(9);
+
+            //fonctions
+            int Somme(int nbB =1, int nbC=5)
+            {
+              int resultatBC = nbB + nbC;
+              return resultatBC;
+            }
+
+            Console.WriteLine(Somme());
+
+            void NiHao()
+            {
+              Console.WriteLine("你好");
+              return;
+              Console.WriteLine("Bonjour");
+            }
+            NiHao();
+
+            string pgq10(int nombre5)
+            {
+              if (nombre5 >10)return "Plus grand que 10";
+              if (nombre5<10)return "Plus petit que 10";
+              return "Egal à 10";
+            }
+
+            Console.WriteLine(pgq10(13));
             Console.ReadKey();
         }
     }

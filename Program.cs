@@ -514,6 +514,38 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
 
             var i = 22;
             Console.WriteLine(i.GetType());
+
+            // Mots-clés ref et out.
+            // ref : permet de passer une variable par référence. Sinon d'habitutre on passe par valeur.
+              // exemple passage par valeur
+              string prenom6 = "Jean";
+              MethodeParVal(prenom6);
+              console_app.WriteLIne("MethodParVal : " + prenom6);
+
+              void MethodeParVal(string str3)
+              {
+                str3 = "Bb";
+              }
+              // exmeple passage par référence
+              string prenom7 = "Jean";
+              MethodParRef(ref prenom7);
+              Console.WriteLine("MethodParRef : " + prenom7);
+
+              void MethodParRef(ref string str4)
+              {
+                str4 = "Bb";
+              }
+
+              // out : permet de retourner plusieurs valeurs à partir d'une méthode
+              string prenom8 = "Jean"; /* ou string prenom8; */
+              MethodeOut(out prenom8);
+              Console.WriteLine("MethodeOut : " + prenom8);
+
+              void MethodeOut(out string str5)
+              {
+                str5 = "Aa";
+              }
+
             Console.ReadKey();
         }
         static void Somme1(int nbD, int nbE)

@@ -22,8 +22,47 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
         Novembre = 11,
         Décembre = 12
       }
+
+       // Les délégues
+            // Les délégues sont des types qui permettent de définir des méthodes qui peuvent être appelées par une autre méthode.
+            // Les délégues sont utiles pour créer des événements et des méthodes anonymes.
+            // Les délégues sont des types référence.
+        delegate void MonDelegue(int nb7, int nb8);
+        delegate int MonDelegueInt(int nb7, int nb8);
         static void Main(string[] args)
         {
+            MonDelegue Operation = Addition;
+            Operation(10, 10);
+
+            MonDelegueInt Op = Add;
+            Op(14, 16);
+            Console.WriteLine(Op(14, 16));
+
+            //methode1 pour délégué
+            void Addition(int nb7, int nb8)
+            {
+              Console.WriteLine(nb7 + nb8);
+            }
+            // methode2 pour délégué
+            void Soustraction(int nb7, int nb8)
+            {
+              Console.WriteLine(nb7 - nb8);
+            }
+
+            int Add(int x, int y)
+            {
+              return (x + y);
+            }
+
+            int Sous(int x, int y)
+            {
+              return (x - y);
+            }
+
+
+
+
+
             Console.Title = "Ma console en C#";
             // Console.BackgroundColor = ConsoleColor.DarkCyan;
             // Console.ForegroundColor = ConsoleColor.Yellow;
@@ -209,9 +248,9 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             Console.WriteLine(tabMois2[1]);
 
             // Structure conditionnelle
-            for (int i =0; i<=10; i++)
+            for (int i0 =0; i0<=10; i0++)
             {
-              Console.WriteLine("Valeur de i : " + i);
+              Console.WriteLine("Valeur de i0 : " + i0);
             }
 
             int compteur;
@@ -221,9 +260,9 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
             }
 
             string[] tPrenoms = {"Luc", "Marc", "Jean-Jacques", "Pierre", "Pablo"};
-            for( int i =0; i <tPrenoms.Length; i++)
+            for( int i1 =0; i1 <tPrenoms.Length; i1++)
             {
-              Console.WriteLine("Index : " + i + " Valeur : " + tPrenoms[i]);
+              Console.WriteLine("Index : " + i1 + " Valeur : " + tPrenoms[i1]);
             }
 
             string[] tVilles ={"Paris", "Rennes", "Le Mans", "Coppenhague", "Londres"};
@@ -405,7 +444,7 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
 
             //random
             Random rand = new Random();
-            for (int i=0; i<1; i++)
+            for (int i4=0; i4<1; i4++)
             {
               int nb6 = rand.Next(101);
               Console.WriteLine(nb6);
@@ -520,7 +559,7 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               // exemple passage par valeur
               string prenom6 = "Jean";
               MethodeParVal(prenom6);
-              console_app.WriteLIne("MethodParVal : " + prenom6);
+              Console.WriteLine("MethodParVal : " + prenom6);
 
               void MethodeParVal(string str3)
               {

@@ -652,9 +652,41 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
 
               int min = diffDate.Days *24*60;
               Console.WriteLine("j'ai " + min + " minutes.");
-              #pragma warning restore format
-              Console.WriteLine
 
+              // Manipuler les chaînes de caractères
+              string MaChaine = "Bonjour le langage C#.";
+              // MaChaine = MaChaine.ToLower();
+              // MaChaine = MaChaine.ToUpper();
+              // simple lettre avec ''
+              // MaChaine = MaChaine.Replace('C', 'F');
+              // MaChaine = MaChaine.Replace("Bonjour", "Salut");
+              // MaChaine = MaChaine.Remove(0, 4);
+              // Substring avec deux paramètres, il prend la position de départ et le nombre de caractères à prendre
+              //  SUbstring avec un seul paramètre, il prend la position de départ et prend tous les caractères jusqu'à la fin
+              // MaChaine = MaChaine.Substring(0, 5);
+              // if(MaChaine.Contains("C#"))
+              // {
+              //   Console.WriteLine("La chaîne contient C#");
+              // }
+              // else
+              // {
+              //   Console.WriteLine("La chaîne ne contient pas C#");
+              // }
+              // MaChaine = MaChaine.Trim();
+              Console.WriteLine(MaChaine + "YYY");
+              Console.WriteLine(MaChaine.LastIndexOf('l'));
+              Console.WriteLine(MaChaine.Length);
+
+              string PrenomC = "Jean, Luce, Marcel, Sophie";
+              string [] tableauPrenomC = PrenomC.Split(",");
+              foreach (string item in tableauPrenomC)
+              {
+                string prenomChacun = item.Trim();
+                Console.WriteLine(prenomChacun);
+              }
+
+              string PrenomD = String.Join("@", tableauPrenomC);
+              Console.WriteLine(PrenomD);
 
             Console.ReadKey();
         }

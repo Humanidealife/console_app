@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Compression;
+using System.Linq.Expressions;
 
 namespace console_app // Remplacez MonNamespace par le nom de votre namespace
 {
@@ -606,6 +607,54 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               {
                 str5 = "Aa";
               }
+
+              // Dates et heures
+              DateTime maintenant = DateTime.Now;
+              Console.WriteLine(maintenant.ToString("dd/MM/yyyy"));
+              Console.WriteLine(maintenant.ToString("yyyy/MM/dd"));
+              Console.WriteLine(maintenant.ToString("dddd dd MMMM yyyy"));
+              Console.WriteLine(maintenant.ToString("H:mm:ss"));
+
+              Console.WriteLine("jour est " + maintenant.Day);
+
+              Console.WriteLine("heure est " + maintenant.Hour);
+
+              TimeSpan heureDuJour = maintenant.TimeOfDay;
+              Console.WriteLine("heure du jour est " + heureDuJour);
+
+              TimeSpan interval = new TimeSpan(0, 10, 0);
+              Console.WriteLine("Heure + 10 minutes : " + heureDuJour.Add(interval));
+              Console.WriteLine("Heure - 10 minutes : " + heureDuJour.Subtract(interval));
+
+              DateTime nouvelleDate = maintenant.AddDays(10);
+              Console.WriteLine("Dans 10 jours : " + nouvelleDate);
+
+              DateTime CeJour = DateTime.Today;
+              Console.WriteLine("Ce jour : " + CeJour );
+              Console.WriteLine("Hier nous étions le : " + CeJour.AddDays(-1));
+
+
+              DateTime DateDeN = new DateTime(1998, 01, 28);
+              TimeSpan Resultat = maintenant.Subtract(DateDeN);
+              Console.WriteLine("Resultat : " + Resultat);
+
+              DateTime d1 = new DateTime(2021,2,26);
+              DateTime d2 = new DateTime(2021,12,28);
+              Console.WriteLine(DateTime.Compare(d1, d2));
+              int Compare = DateTime.Compare(d1, d2);
+              if (Compare == -1) Console.WriteLine(d2 + " est plus récente que " + d1);
+              if (Compare == 0) Console.WriteLine(d2 + " est égale à " + d1);
+              if (Compare == 1) Console.WriteLine(d2 + " est plus ancienne que " + d1);
+
+              DateTime an = new DateTime(1998, 12, 31);
+              TimeSpan diffDate = maintenant -an;
+              Console.WriteLine("j'ai " + diffDate.Days + " jours.");
+
+              int min = diffDate.Days *24*60;
+              Console.WriteLine("j'ai " + min + " minutes.");
+              #pragma warning restore format
+              Console.WriteLine
+
 
             Console.ReadKey();
         }

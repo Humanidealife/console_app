@@ -688,6 +688,20 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               string PrenomD = String.Join("@", tableauPrenomC);
               Console.WriteLine(PrenomD);
 
+//2024.03.01 pas terminé  Array
+              string[] tableau1 = {"Jean", "Luc", "Marcel", "Sophie", "Pierre"};
+              string[] tableau2 = new string[tableau1.Length];
+              string[] tableau3 = new
+
+              tableau2 = tableau1;
+              foreach(string item in tableau2)
+              {
+                Console.WriteLine(item);
+              }
+
+              Array.Copy(tableau1, tableau3, tableau1.Length);
+
+
             Console.ReadKey();
         }
         static void Somme1(int nbD, int nbE)

@@ -31,6 +31,17 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
         delegate int MonDelegueInt(int nb7, int nb8);
         static void Main(string[] args)
         {
+
+            Console.Title = "Ma console en C#";
+            // Console.BackgroundColor = ConsoleColor.DarkCyan;
+            // Console.ForegroundColor = ConsoleColor.Yellow;
+            // Console.WindowWidth = 100;
+            // Console.WindowHeight = 30 ;
+
+            Console.WriteLine("Voici, mon prmier programme en C#");
+
+
+
             MonDelegue Operation = Addition;
             Operation(10, 10);
 
@@ -59,18 +70,29 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               return (x - y);
             }
 
+            //Action délégué façon 1 avec une méthode void
 
+            Action<string> affiche;
+            affiche = print;
 
+            affiche("salut");
 
+            void print(string str6)
+            {
+              Console.WriteLine(str6);
+            }
 
-            Console.Title = "Ma console en C#";
-            // Console.BackgroundColor = ConsoleColor.DarkCyan;
-            // Console.ForegroundColor = ConsoleColor.Yellow;
-            // Console.WindowWidth = 100;
-            // Console.WindowHeight = 30 ;
+            //Action délégué façon 2 avce une expression lambda
+            Action<string> affiche2 = str7 => Console.WriteLine(str7);
 
+            affiche2("ToTo");
 
-            Console.WriteLine("Voici, mon prmier programme en C#");
+            //Action délégué façon 3 avec une méthode anonyme
+            Action<string> affiche3 = delegate (string str8)
+            {
+              Console.WriteLine(str8);
+            };
+            affiche3("NiHao");
             // Boolean
             bool homme = true;
             Console.WriteLine(homme);

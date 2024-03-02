@@ -688,10 +688,10 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               string PrenomD = String.Join("@", tableauPrenomC);
               Console.WriteLine(PrenomD);
 
-//2024.03.01 pas terminé  Array
-              string[] tableau1 = {"Jean", "Luc", "Marcel", "Sophie", "Pierre"};
+              //Array
+              string[] tableau1 = {"Jean", "Luc", "Marcel", "Sophie", "Pierre", "Luc"};
               string[] tableau2 = new string[tableau1.Length];
-              string[] tableau3 = new
+              string[] tableau3 = new string[tableau1.Length];
 
               tableau2 = tableau1;
               foreach(string item in tableau2)
@@ -700,6 +700,25 @@ namespace console_app // Remplacez MonNamespace par le nom de votre namespace
               }
 
               Array.Copy(tableau1, tableau3, tableau1.Length);
+
+              Console.WriteLine("Index de Sophie : " + Array.IndexOf(tableau3, "Sophie"));
+              Console.WriteLine("Index du dernier Lux : " + Array.LastIndexOf(tableau3, "Luc"));
+
+              // Array.Reverse(tableau3);
+
+              // Array.Resize(ref tableau3, 10);
+              // tableau3[8] = "NouveauPrénom";
+
+              Array.Sort(tableau3);
+              // tableau3 = null;
+
+              // Array.Clear(tableau3, 1, 2);
+
+              foreach (string item1 in tableau3)
+              {
+                Console.WriteLine(item1);
+              }
+
 
 
             Console.ReadKey();

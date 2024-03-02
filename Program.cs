@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+// Notes du cours C# des 3 premiers chapitres"Les fondamentaux du C#"
+
 using System;
 using System.Collections.Generic;
 using System.IO.Compression;
